@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-theme="light">
+    <header>
+      <h1>Music Player</h1>
+      <button id="toggle-theme">Toggle Theme</button>
+    </header>
+
+    <div class="container">
+      <div id="all-songs">
+        <h2>All Songs</h2>
+        <div class="filter-search-container">
+          <select id="genre-filter">
+            <option value="">All Genres</option>
+            <option value="Romantic">Romantic</option>
+            <option value="Party">Party</option>
+            <option value="Pop">Pop</option>
+          </select>
+          <input
+            type="text"
+            id="search-songs"
+            placeholder="Search for songs..."
+          />
+        </div>
+
+        <div id="song-list" class="song-list"></div>
+      </div>
+
+      <div id="song-card">
+        <img id="song-img" src="" alt="Song Image" />
+        <h3 id="song-name"></h3>
+        <p id="song-artist"></p>
+        <div class="controls">
+          <button id="prev">Prev</button>
+          <button id="play">Play</button>
+          <button id="pause">Pause</button>
+          <button id="next">Next</button>
+        </div>
+
+        <button id="add-to-playlist">Add to Playlist</button>
+      </div>
+
+      <div id="playlist">
+        <h2>Playlists</h2>
+        <input
+          type="text"
+          id="search-playlist"
+          placeholder="Search for playlists..."
+        />
+        <button id="create-playlist">Create Playlist</button>
+        <ul id="playlist-list"></ul>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

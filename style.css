@@ -1,0 +1,224 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+body[data-theme="dark"] {
+  --background-color: #1e1e1e;
+}
+body[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 2%;
+}
+header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #6e33e7 0%, #4ea0d9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#toggle-theme {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  background-color: #5a5a5a;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3rem;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+#toggle-theme:hover {
+  background-color: #333333;
+} /* Container Styles */
+.container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+} /* All Songs Section */
+#all-songs {
+  background-color: lightcoral;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#all-songs:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#all-songs h2 {
+  text-align: center;
+}
+#genre-filter,
+#search-songs {
+  width: 80%;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+} /* Filtered Songs */
+.song-list {
+  margin-top: 1rem;
+}
+.filteredSongs {
+  margin: 5px 0;
+  padding: 15px;
+  background-color: gold;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.filteredSongs:hover {
+  background-color: #ffecb3;
+  transform: scale(1.05);
+} /* Song Card */
+#song-card {
+  background-color: skyblue;
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#song-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#song-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: opacity 0.3s ease;
+}
+#song-name {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: #333;
+}
+#song-artist {
+  font-size: 1.2rem;
+  color: #555;
+} /* Control Buttons */
+#song-card button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 95%;
+  transition: background-color 0.3s ease;
+}
+#song-card button:hover {
+  background-color: #005f73;
+} /* Playlist Section */
+#playlist {
+  background-color: palegreen;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+  flex: 1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#playlist:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+#playlist button {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: -webkit-fill-available;
+}
+#playlist button:hover {
+  background-color: #d32f2f;
+}
+#playlist-list {
+  list-style: none;
+  padding: 0;
+} /* Search Playlist with Unique Properties */
+#playlist h2 {
+  text-align: center;
+}
+#search-playlist {
+  width: 90%;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(135deg, #6e33e7, #4ea0d9);
+}
+#search-playlist:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.filter-search-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#genre-filter,
+#search-songs {
+  width: 45%; /* Adjust as needed to fit the container */
+  padding: 10px;
+  margin: 10px 0; /* Remove auto and adjust vertical margin */
+  display: block;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.controls {
+  display: flex;
+  justify-content: space-around; /* You can use space-between or another value based on your preference */
+  align-items: center;
+  margin: 10px 0; /* Adjust margin as needed */
+}
+.controls button {
+  background-color: #008cba;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px; /* Adjust margin between buttons */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.controls button:hover {
+  background-color: #005f73;
+}
